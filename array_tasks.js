@@ -29,12 +29,21 @@ var arrayTasks = {
 	},
 
 	// findDuplicates: function (arr) {
+ // 	newArray = arr.filter();
  //
+	// 	}
+	// 	return newArray;
 	// },
- //
-	// removeAndClone: function (arr, valueToRemove) {
- //
-	// },
+
+	removeAndClone: function (arr, valueToRemove) {
+		for(let value of arr) {
+			if (value === valueToRemove) {
+				index = arr.indexOf(value);
+				arr.splice(index, 1);
+			}
+		}
+		return arr;
+	},
  //
 	// findIndexesOf: function (arr, itemToFind) {
  //
