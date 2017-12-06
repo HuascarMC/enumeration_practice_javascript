@@ -28,12 +28,17 @@ var arrayTasks = {
 		return sum;
 	},
 
-	// findDuplicates: function (arr) {
- // 	newArray = arr.filter();
- //
-	// 	}
-	// 	return newArray;
-	// },
+	findDuplicates: function (arr) {
+ 	let newArray = [];
+		let duplicatesArray = [];
+		for (let item of arr) {
+			if (newArray.includes(item) && !duplicatesArray.includes(item)){
+				duplicatesArray.push(item);
+			}
+			newArray.push(item);
+		}
+		return duplicatesArray;
+	},
 
 	removeAndClone: function (arr, valueToRemove) {
 		for(let value of arr) {
@@ -49,7 +54,9 @@ var arrayTasks = {
 		newArray = [];
  	for(let item of arr) {
 			index = arr.indexOf(item);
-			newArray.push(index);
+			if(item === itemToFind) {
+				newArray.push(index);
+			}
 		}
 		return newArray;
 	},
