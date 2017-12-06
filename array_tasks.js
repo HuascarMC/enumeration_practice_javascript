@@ -44,11 +44,16 @@ var arrayTasks = {
 		}
 		return arr;
 	},
- //
-	// findIndexesOf: function (arr, itemToFind) {
- //
-	// },
- //
+
+	findIndexesOf: function (arr, itemToFind) {
+		newArray = [];
+ 	for(let item of arr) {
+			index = arr.indexOf(item);
+			newArray.push(index);
+		}
+		return newArray;
+	},
+
 	// sumOfAllEvenNumbersSquared: function (arr) {
  //
 	// }
