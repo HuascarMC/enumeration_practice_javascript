@@ -20,10 +20,14 @@ var arrayTasks = {
 		return newArray;
 	},
 
-	// sum: function (arr) {
- //
-	// },
- //
+	sum: function (arr) {
+		sum = 0;
+		for(let number of arr) {
+			sum += number;
+		}
+		return sum;
+	},
+
 	// findDuplicates: function (arr) {
  //
 	// },
