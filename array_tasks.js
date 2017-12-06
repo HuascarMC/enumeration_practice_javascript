@@ -9,11 +9,17 @@ var arrayTasks = {
  		arr.splice(index, 0, itemToAdd);
 			return arr;
 	},
- //
-	// square: function (arr) {
- //
-	// },
- //
+
+	square: function (arr) {
+ 	newArray = [];
+
+		 for(let number of arr) {
+				n = number * number;
+				newArray.push(n);
+		}
+		return newArray;
+	},
+
 	// sum: function (arr) {
  //
 	// },
