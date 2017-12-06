@@ -52,11 +52,12 @@ var arrayTasks = {
 
 	findIndexesOf: function (arr, itemToFind) {
 		newArray = [];
+		index = 0;
  	for(let item of arr) {
-			index = arr.indexOf(item);
 			if(item === itemToFind) {
 				newArray.push(index);
 			}
+			index++;
 		}
 		return newArray;
 	},
