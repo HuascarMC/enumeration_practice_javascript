@@ -11,12 +11,12 @@ var arrayTasks = {
 	},
 
 	square: function (arr) {
- 	newArray = [];
+ 	newArray = arr.map(number => number * number)
 
-		 for(let number of arr) {
-				n = number * number;
-				newArray.push(n);
-		}
+		//  for(let number of arr) {
+		// 		n = number * number;
+		// 		newArray.push(n);
+		// }
 		return newArray;
 	},
 
