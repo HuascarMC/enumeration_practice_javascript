@@ -76,11 +76,11 @@ var arrayTasks = {
 	sumOfAllEvenNumbersSquared: function (arr) {
  	evenNumbers = [];
 		squared = [];
-		for(let item of arr) {
+		arr.forEach(function(item) {
 			if(item % 2 == 0) {
 				evenNumbers.push(item);
 			}
-		}
+		});
 		squared = this.square(evenNumbers);
 		return this.sum(squared);
 	}
