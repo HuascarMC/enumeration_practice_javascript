@@ -1,5 +1,11 @@
 var arrayTasks = {
 
+	forEach: function(arr) {
+		for(let item in array) {
+
+		}
+	},
+
 	concat: function (arr1, arr2) {
 			array = arr1.concat(arr2);
 			return array;
@@ -11,7 +17,7 @@ var arrayTasks = {
 	},
 
 	square: function (arr) {
- 	newArray = arr.map(number => number * number)
+ 	let newArray = arr.map(number => number * number)
 
 		//  for(let number of arr) {
 		// 		n = number * number;
@@ -31,12 +37,13 @@ var arrayTasks = {
 	findDuplicates: function (arr) {
  	let newArray = [];
 		let duplicatesArray = [];
-		for (let item of arr) {
+
+		arr.forEach( function(item) {
 			if (newArray.includes(item) && !duplicatesArray.includes(item)){
 				duplicatesArray.push(item);
 			}
 			newArray.push(item);
-		}
+	});
 		return duplicatesArray;
 	},
 
