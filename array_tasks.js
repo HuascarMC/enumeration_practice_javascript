@@ -48,24 +48,28 @@ var arrayTasks = {
 	},
 
 	removeAndClone: function (arr, valueToRemove) {
-		for(let value of arr) {
-			if (value === valueToRemove) {
-				index = arr.indexOf(value);
-				arr.splice(index, 1);
-			}
-		}
-		return arr;
+		return arr.filter(function (item) {
+			return item !== valueToRemove
+		})
+
+		// for(let value of arr) {
+		// 	if (value === valueToRemove) {
+		// 		index = arr.indexOf(value);
+		// 		arr.splice(index, 1);
+		// 	}
+		// }
+		// return arr;
 	},
 
 	findIndexesOf: function (arr, itemToFind) {
-		newArray = [];
+		var newArray = [];
 		index = 0;
- 	for(let item of arr) {
+ 	arr.forEach( function(item) {
 			if(item === itemToFind) {
 				newArray.push(index);
-			}
-			index++;
 		}
+		index++;
+	});
 		return newArray;
 	},
 
